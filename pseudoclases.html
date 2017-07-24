@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>pseudoclases</title>
+
+    <style>
+        /*a {
+            display: inline-block;
+            background: red;
+            color: #fff;
+            line-height: 2;
+            padding: 0 1rem;
+            text-decoration: none;
+        }*/
+        
+        *,
+        html {
+            margin: 0;
+            padding: 0;
+        }
+        
+        a:hover {
+            background: darkred;
+        }
+        
+        a:active {
+            transform: scale(0.9);
+        }
+        
+        a:visited {
+            color: peru;
+        }
+        
+        nav {
+            text-align: center;
+            position: fixed;
+            background: #222;
+            padding: 1em;
+            width: 100%;
+            top: 0;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.5em;
+        }
+        
+        #parrafo {
+            margin-top: 50em;
+            margin-bottom: 50em;
+        }
+        
+        #parrafo:target {
+            padding-top: 5em;
+            background: darkcyan;
+        }
+        
+        aside {
+            background: yellow;
+            margin: 1em;
+        }
+        
+        aside:empty {
+            background: red;
+            padding: 1em;
+        }
+        
+        aside:not(:empty) {
+            background: lime;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--
+        Pseudoclases de enlaces
+
+        * hover -> cuando paso el raton 
+        * active -> fraccion de segundos cuando presionas el boton  
+        * visited -> ya fue visitado
+        * target -> indica a un elemento que asido alcanzado por un marcador
+        * empty -> indica un elemento vacio
+        * not   -> recibe un parametro, cualquier selector, y hace que no cumpla es una negacion
+    -->
+    <nav>
+        <a href="#parrafo">Programación</a>
+    </nav>
+    <p id="parrafo">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error, quis enim sunt dolorem perferendis. Pariatur, inventore dolorem ducimus laborum praesentium tenetur rem adipisci sit quo assumenda, consectetur at perferendis! Lorem ipsum dolor sit
+        amet, consectetur adipisicing elit. Dolor error, quis enim sunt dolorem perferendis. Pariatur, inventore dolorem ducimus laborum praesentium tenetur rem adipisci sit quo assumenda, consectetur at perferendis!</p>
+    </p>
+
+    <aside>
+        hola mundo
+    </aside>
+    <aside></aside>
+    <aside>hola mundo de nuevo</aside>
+</body>
+
+</html>
