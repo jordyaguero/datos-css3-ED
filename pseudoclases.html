@@ -87,6 +87,36 @@
         range:out-of-range {
             background: #222;
         }
+        /*
+        div p:first-child {
+            background: red;
+        }
+        
+        div p:last-child {
+            background: blue;
+        }
+        */
+        /*
+        div p:nth-child(3) {
+            background: yellow;
+        }
+        */
+        /*
+        even:pares, odd: impares
+        div p:nth-child(even) {
+            background: peru;
+        }
+        */
+        
+        div p:nth-child(3n-2) {
+            /* n es un multiplicador que comienza de 0*/
+            background: olive;
+        }
+        
+        div p:nth-last-child(3n-2) {
+            /* n es un multiplicador que comienza de 0*/
+            background: greenyellow;
+        }
     </style>
 </head>
 
@@ -136,6 +166,38 @@
         * in-range
         * out-of-range
     -->
+
+    <!-- 
+        pseudocalses child
+
+        hay 3 formas de child
+        
+        * mediante palabras
+        * mediandte numeros
+        * mediante combinaciones
+        * :last-child
+        * :first-child
+        * :nth-child()
+        * :nth-last-child() -> comienza desde abajo
+        * :only-child()  -> solo funciona cuando hay un unico elemento
+    
+        * nota: nht-child lo que busca es hijos, no elementos
+    -->
+
+    <div>
+        <p>numero 1</p>
+        <p>numero 2</p>
+        <p>numero 3</p>
+        <p>numero 4</p>
+        <p>numero 5</p>
+        <p>numero 6</p>
+        <p>numero 7</p>
+        <p>numero 8</p>
+        <p>numero 9</p>
+        <p>numero 10</p>
+        <p>numero 11</p>
+        <p>numero 12</p>
+    </div>
 
 </body>
 
