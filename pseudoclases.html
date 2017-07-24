@@ -17,12 +17,6 @@
             text-decoration: none;
         }*/
         
-        *,
-        html {
-            margin: 0;
-            padding: 0;
-        }
-        
         a:hover {
             background: darkred;
         }
@@ -73,6 +67,26 @@
         aside:not(:empty) {
             background: lime;
         }
+        /*
+        input:focus {
+            background: yellow;
+        }*/
+        
+        input:valid {
+            background: peru;
+        }
+        
+        input:invalid {
+            background: red;
+        }
+        
+        range:in-range {
+            background: blue;
+        }
+        
+        range:out-of-range {
+            background: #222;
+        }
     </style>
 </head>
 
@@ -101,6 +115,28 @@
     </aside>
     <aside></aside>
     <aside>hola mundo de nuevo</aside>
+
+    <form>
+        <input>
+        <input type="email">
+        <input type="number" class="range">
+    </form>
+
+    <!-- 
+        pseudoclases en formularios
+
+        * focus -> cuando hacemos click en un campo de texto
+        * enabled -> elementos activados
+        * disabled -> elementos desactivados
+        * checked 
+        * required -> cuando es requerido
+        * optional
+        * valid  -> cuando ya validamos el campo
+        * invalid
+        * in-range
+        * out-of-range
+    -->
+
 </body>
 
 </html>
