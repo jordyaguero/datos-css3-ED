@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Box-sizing</title>
+
+    <style>
+        /*
+            se suma el modelo de caja de esta manera:
+                contenido + padding + border = ancho total o alto total
+        
+            es recomendable si trabajamos con css puro colocar al comienzo de nuestra hoja de estilo
+            lo siguiente: 
+
+            *,*::after, *:::before
+            {
+                box-sizing: border:box;
+            }
+      */
+        
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        .caja {
+            border: 2px solid red;
+            width: 300px;
+            height: 200px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="caja">
+        holi boli
+    </div>
+</body>
+
+</html>
