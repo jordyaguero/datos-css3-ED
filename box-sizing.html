@@ -33,6 +33,33 @@
             height: 200px;
             padding: 20px;
             box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        /*
+            propiedades de border, tambien funcionan como shorhand en sentido de agujas del reloj
+            
+            * border-style
+            * border-width 
+            * border-color
+            * border-left: 5px solid pink;
+        */
+        
+        .border {
+            width: 500px;
+            height: 300px;
+            /*
+            border-style: solid dotted;
+            border-color: peru;
+            border-width: 10px 20px 30px 40px;
+            border-left: 5px solid pink;
+            */
+            border-left: 5px solid;
+            border-right: 5px solid;
+            border-top: 5px solid;
+            color: blue;
+            /*otra forma*/
+            border: 5px solid red;
+            border-bottom: none;
         }
     </style>
 </head>
@@ -41,6 +68,10 @@
 
     <div class="caja">
         holi boli
+    </div>
+
+    <div class="border">
+        propiedades border
     </div>
 </body>
 
