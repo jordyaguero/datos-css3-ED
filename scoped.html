@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- 
+        con el atributo scoped en la etiqueta html se pueden dae estilos
+        individualmente al elemento, funciona como scope de una variable
+        
+        - en css funciona con la pseudoclase :scope
+    -->
+    <article>
+
+        <style scoped>
+            h2 {
+                background: skyblue;
+            }
+            
+            p {
+                color: peru;
+            }
+            
+             :scope {
+                background: yellow;
+            }
+        </style>
+
+        <h2>Hola 1</h2>
+        <p>soy el parrafo 1</p>
+    </article>
+
+    <article>
+        <h2>Hola 2</h2>
+        <p>soy el parrafo 2</p>
+    </article>
+</body>
+
+</html>
