@@ -106,6 +106,20 @@
                 - bg-origin es como si fuera una nueva caja 
             */
         }
+        
+        .gear {
+            width: 200px;
+            height: 200px;
+            background: gray;
+            border: 20px dashed gray;
+            border-radius: 50%;
+            background-clip: content-box;
+            transition: .7s all ease;
+        }
+        
+        .gear:hover {
+            transform: rotate(360deg);
+        }
     </style>
 </head>
 
@@ -126,6 +140,8 @@
     <div class="background">
 
     </div>
+
+    <div class="gear"></div>
 
 </body>
 
