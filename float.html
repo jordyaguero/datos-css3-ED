@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>float</title>
+
+    <style>
+        img {
+            float: right;
+        }
+        
+        p {
+            margin: 0 10px 0 10px;
+        }
+        
+        article {
+            font-size: 1em;
+            padding: 1em;
+            border: 1px solid red;
+            width: 80%;
+            margin: 0 auto;
+            overflow: hidden;
+            background: skyblue;
+            opacity: .85;
+            line-height: 1.5;
+        }
+        /*
+        article::after {
+            content: '';
+            display: block;
+            width: 200px;
+            height: 200px;
+            background: red;
+            position: relative;
+            left: -100px;
+        }
+        */
+        
+        pre {
+            border: 2px solid #222;
+            width: 100%;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>El Kun Aguero</h1>
+    <article>
+        <img src="http://ichef.bbci.co.uk/onesport/cps/624/cpsprodpb/D0BD/production/_90973435_sergioaguero_rex.jpg" alt="aguero" class="aguero">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nam, facilis natus culpa quisquam nulla impedit officia ea incidunt aliquam officiis! Ut commodi quidem ad recusandae reprehenderit, culpa accusantium, laborum! Lorem ipsum dolor sit
+            amet, consectetur adipisicing elit. Et, nam, facilis natus culpa quisquam nulla impedit officia ea incidunt aliquam officiis! Ut commodi quidem ad recusandae reprehenderit, culpa accusantium, laborum! Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Et, nam, facilis natus culpa quisquam nulla impedit officia ea incidunt aliquam officiis! Ut commodi quidem ad recusandae reprehenderit, culpa accusantium, laborum! Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Et, nam, facilis natus culpa quisquam nulla impedit officia ea incidunt aliquam officiis! Ut commodi quidem ad recusandae reprehenderit, culpa accusantium, laborum! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et, nam, facilis
+            natus culpa quisquam nulla impedit officia ea incidunt aliquam officiis! Ut commodi quidem ad recusandae reprehenderit, culpa accusantium, laborum!
+        </p>
+    </article>
+
+    <!-- 
+        overflow: hidden; 
+        existen 3 propiedades: hidden, scroll y auto
+        auto va hacer que si necesita pondra el scroll
+
+        tambien hay: 
+        overflow-x; solo scroll para x
+        overflow-y; solo scroll para y
+    -->
+    <pre>
+        <code>
+            (function()
+            {
+                return "hola jordy estas en un progreso impresionante";
+            })();
+        </code>
+    </pre>
+</body>
+
+</html>
