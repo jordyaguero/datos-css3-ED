@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>z-index</title>
+
+    <style>
+        .capa {
+            width: 200px;
+            height: 200px;
+            font-size: 3em;
+            text-align: center;
+            line-height: 200px;
+            color: #fff;
+            position: relative;
+        }
+        
+        .uno {
+            position: relative;
+            background: hsl(120, 70%, 50%);
+        }
+        
+        .uno::after {
+            content: '';
+            display: block;
+            height: 150px;
+            width: 150px;
+            background: orangered;
+            position: absolute;
+            top: 80px;
+            left: 120px;
+            z-index: -10;
+        }
+        
+        .dos {
+            top: -100px;
+            left: 100px;
+            background: hsl(200, 70%, 50%);
+        }
+        
+        .tres {
+            z-index: -10;
+            top: -200px;
+            left: 200px;
+            background: hsl(300, 70%, 50%);
+        }
+        /*
+            tips: 
+            
+            1. usar valores para z-index no consecutivos y usar valores grandes
+            2. si quieres enviar un psedoelemento detras de un elemento, se debe colocar el z-index negativo al pseudoelemento
+                pero el elemento no tiene que tener z-index
+        */
+    </style>
+</head>
+
+<body>
+
+    <div class="uno capa">1</div>
+    <!-- <div class="dos capa">2</div>
+    <div class="tres capa">3</div> -->
+
+</body>
+
+</html>
