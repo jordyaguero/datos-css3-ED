@@ -140,6 +140,27 @@
         .menu li:hover>ul {
             display: block;
         }
+        /*
+            Position fixed
+
+            1. Pierde su espacio en el flujo
+            2. su contexto es el viemport
+            3. sus dimensiones se ajustan al contenido
+               (salvo que se haya declarado su tamaño)
+            4. se queda fijo en el viewport sin moverse con el scroll
+        */
+        
+        .main-header {
+            background: hsl(210, 70%, 50%);
+            color: #eee;
+            position: fixed;
+            width: 100%;
+            text-align: center;
+            padding: 1em 0;
+            top: 0;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     </style>
 </head>
 
@@ -180,6 +201,12 @@
         <li><a href="">item 5</a></li>
         <li><a href="">item 6</a></li>
     </ul>
+
+    <!-- Position fixed -->
+
+    <header class="main-header">
+        Escuela Digital
+    </header>
 </body>
 
 </html>
