@@ -88,6 +88,58 @@
             justify-content: center;
             align-items: center;
         }
+        
+        .menu,
+        .menu ul {
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .menu {
+            margin-top: 1em;
+            margin-bottom: 50em;
+            background: #333;
+            display: table;
+        }
+        
+        .menu>li {
+            float: left;
+        }
+        
+        .menu li {
+            position: relative;
+        }
+        
+        .menu a {
+            color: #eee;
+            text-decoration: none;
+            display: block;
+            padding: .5em 1.5em;
+            white-space: nowrap;
+            /*ajusta el contenido no saltes de linea*/
+        }
+        
+        .menu li>ul {
+            position: absolute;
+            background: #222;
+            /* width: 170px;*/
+            display: none;
+        }
+        
+        .menu ul ul {
+            top: 0;
+            left: 100%;
+        }
+        
+        .menu li:hover {
+            background: rgba(0, 0, 0, .5);
+        }
+        
+        .menu li:hover>ul {
+            display: block;
+        }
     </style>
 </head>
 
@@ -102,7 +154,32 @@
         <p class="titulo">Dragon Ball Super</p>
     </div>
 
-    <p>hola</p>
+    <!-- 
+        position absolute en ejemplo de menu
+    -->
+
+    <ul class="menu">
+        <li><a href="">item 1</a></li>
+        <li><a href="">item 2</a></li>
+        <li>
+            <a href="">item 3</a>
+            <ul>
+                <li><a href="">sub item 1</a></li>
+                <li><a href="">sub item 2</a></li>
+                <li>
+                    <a href="">sub item 3</a>
+                    <ul>
+                        <li><a href="">sub sub item 1</a></li>
+                        <li><a href="">sub sub item 2</a></li>
+                        <li><a href="">sub sub item 3</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="">item 4</a></li>
+        <li><a href="">item 5</a></li>
+        <li><a href="">item 6</a></li>
+    </ul>
 </body>
 
 </html>
