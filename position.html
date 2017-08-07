@@ -25,13 +25,23 @@
             2. conserva sus dimensiones originales
             3. su contexto es su posicion inicial
         */
+        /*
+            position absolute
+            
+            1. no conserva su espacio en el flujo
+            2. sus dimensiones se adaptan al contenido
+            3. su contexto es su ancestro posicionado mas cercano
+
+            * para borrar el espacio en la parte de abajo de una imagen se hace con display: block; ya que
+              por defecto las imagenes son inline y traen ese espacio.
+        */
         
-        div {
+        article {
             background: gray;
-            position: relative;
             top: 50px;
             border: 5px dashed blue;
             left: 50px;
+            margin-bottom: 50px;
         }
         
         h1 {
@@ -42,14 +52,57 @@
             left: 50px;
             margin: 0;
         }
+        
+        .poster {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .poster:hover .titulo {
+            top: 0;
+        }
+        
+        .poster img {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+        
+        .titulo {
+            box-sizing: border-box;
+            background: rgba(0, 0, 0, .8);
+            color: #fff;
+            position: absolute;
+            top: -100%;
+            /*  top: -100% para que se vaya de su tamaño original*/
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: .5em;
+            font-size: 1.2em;
+            transition: .3s all ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
     </style>
 </head>
 
 <body>
 
-    <div>
+    <article>
         <h1>Hola mundo</h1>
+    </article>
+
+    <div class="poster">
+        <img src="http://www.daisuki.net/content/dam/Daisuki/contents/dbs/top/images/mainvisual_img_universe.jpg" alt="goku">
+        <p class="titulo">Dragon Ball Super</p>
     </div>
+
+    <p>hola</p>
 </body>
 
 </html>
