@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>menu con flex-box</title>
+
+    <style>
+        ul {
+            background: #222;
+            list-style: none;
+            margin-bottom: 0;
+            margin-top: 0;
+            padding-left: 0;
+        }
+        
+        .menu {
+            display: flex;
+        }
+        
+        .menu__item {
+            flex: auto;
+        }
+        
+        a {
+            color: #fff;
+            display: block;
+            padding: .5em;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        
+        li {
+            position: relative;
+        }
+        
+        li:hover {
+            background: #000;
+        }
+        
+        .submenu,
+        .subsubmenu {
+            display: none;
+            position: absolute;
+        }
+        
+        .menu__item:hover>.submenu,
+        .submenu__item:hover>ul {
+            display: block;
+        }
+        
+        .subsubmenu {
+            top: 0;
+            left: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <li class="menu__item">
+            <a href="#" class="menu__link">item 1</a>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">item 2</a></li>
+        <li class="menu__item">
+            <a href="#" class="menu__link">item 3</a>
+            <ul class="submenu">
+                <li class="submenu__item"><a class="submenu__link" href="#">subitem 1</a></li>
+                <li class="submenu__item"><a class="submenu__link" href="#">subitem 2</a></li>
+                <li class="submenu__item">
+                    <a class="submenu__link" href="#">subitem 3</a>
+                    <ul class="subsubmenu">
+                        <li><a href="#">subsubitem</a></li>
+                        <li><a href="#">subsubitem</a></li>
+                        <li><a href="#">subsubitem</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">item 4</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">item 5</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">item 6</a></li>
+    </ul>
+
+</body>
+
+</html>
