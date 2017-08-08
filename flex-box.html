@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>flex box</title>
+
+    <style>
+        .container {
+            display: flex;
+            height: 500px;
+            width: 500px;
+            background: gray;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        
+        .item {
+            order: -1;
+            align-self: flex-end;
+        }
+        
+        .container2 {
+            margin-top: 3em;
+            display: flex;
+            height: 500px;
+            width: 500px;
+            background: gray;
+            justify-content: space-between;
+            flex-direction: column;
+            text-align: center;
+            line-height: 2;
+        }
+        
+        .container2 .item:nth-child(odd) {
+            background: yellow;
+            width: 30px;
+            height: 30px;
+            margin: 10px;
+        }
+        
+        .container2 .item:nth-child(even) {
+            background: green;
+            width: 30px;
+            height: 30px;
+            color: white;
+            margin: 10px;
+        }
+        
+        .container2 .item:nth-child(3) {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        
+        .centrar {
+            margin-top: 3em;
+            display: flex;
+            height: 500px;
+            width: 500px;
+            background: gray;
+        }
+        
+        .hola {
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        Flexbox requiere de un elemento padre y al menos un elemento hijo
+
+        padre -> flex-container
+        *hijo  -> flex-item
+        
+        * se refiere a hijos directos
+
+        padre
+        {
+            display: flex; // crea un contexto flex para sus hijos
+        }
+
+        los hijos (flex-items) son las cajas flexibles
+        - los pesudoelementos  ::after y ::before tambien se consideran hijos
+        - el texto tambien se considera hijo
+    
+        - flex-wrap: wrap-reverse; // cambia de poscion las lineas 
+    
+        - flex-flow: flex-direction  | flex-wrap; ejm:
+            flex-flow: column wrap-reverse;
+
+        - cuando solo hay un elemento y queremos centrar perfectamente
+          en horizontal y vertical asignamos la propiedad margin: auto; 
+          en el elemento.
+
+          * alineacion en el eje main-axis:
+          - flex-direction: row;
+          -               : row-reverse;
+          -               : column;
+          -               : column-reverse;
+
+          - order es una propiedad para los hijos del main-axis
+          - align-self: es una propiedad para los hijos del cross-axis
+
+        - flex-basis: main-size inicial
+        - flex-grow: factor de crecimiento
+        - flex-shrink: factor de encogimiento
+        - flex: grow shrink basis
+
+        -->
+
+    <div class="container">
+        hola mundo
+        <div class="item">1</div>
+    </div>
+
+    <div class="container2">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <div class="centrar">
+        <div class="hola">hola</div>
+    </div>
+</body>
+
+</html>
