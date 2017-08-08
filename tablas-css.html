@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .container-table {
+            overflow: auto;
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 10px;
+            /* da un espaciado entre los td, no tiene ningun efecto contra border-collapse: collapse*/
+            table-layout: fixed;
+            width: 70%;
+            min-width: 500px;
+            /* table-layout: fixed; sirve para darle el mismo tamaño 
+            a las columnas de la tabla, se tiene que especificar obligatoriamente el width para que funcione*/
+        }
+        
+        tr:nth-child(even) {
+            background: #eee;
+        }
+        
+        td {
+            border: 1px solid #ccc;
+            padding: .5em;
+        }
+        
+        th {
+            border: 1px solid #ccc;
+            background: teal;
+            padding: .5em;
+            color: #fff;
+        }
+        /* th:last-child {
+            border-right: teal;
+        }*/
+    </style>
+</head>
+
+<body>
+
+    <div class="container-table">
+        <table>
+            <tr>
+                <th>columna 1</th>
+                <th>columna 2</th>
+                <th>columna 3</th>
+            </tr>
+            <tr>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+            <tr>
+                <td>hola mundo 2</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+            <tr>
+                <td>hola mundo 2</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+            <tr>
+                <td>hola mundo 2</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+            <tr>
+                <td>hola mundo 2</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+            <tr>
+                <td>hola mundo 2</td>
+                <td>hola mundo</td>
+                <td>hola mundo</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
