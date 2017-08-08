@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>banner animado</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        .banner {
+            display: flex;
+            height: 250px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+        }
+        
+        .item {
+            display: flex;
+            flex: 1 1 30px;
+            transition: all .3s ease;
+        }
+        
+        .item:first-child {
+            background: hsl(80, 80%, 50%);
+        }
+        
+        .item:nth-child(2) {
+            background: hsl(180, 80%, 50%);
+        }
+        
+        .item:nth-child(3) {
+            background: hsl(270, 80%, 70%);
+        }
+        
+        .item:nth-child(4) {
+            background: hsl(320, 80%, 80%);
+        }
+        
+        .item span {
+            margin: auto;
+            transform: rotate(-90deg);
+            transition: all .3s ease;
+        }
+        
+        .item:hover {
+            flex: 10 0 auto;
+        }
+        
+        .item:hover span {
+            transform: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="banner">
+        <div class="item"><span>Experiencia</span></div>
+        <div class="item"><span>Excelencia</span></div>
+        <div class="item"><span>Calidad</span></div>
+        <div class="item"><span>Calidez</span></div>
+    </div>
+
+</body>
+
+</html>
