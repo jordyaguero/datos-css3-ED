@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>colores</title>
+
+    <style>
+        /*
+        body {
+            margin: 0;
+            min-height: 100vh;
+            width: 100%;
+            margin: 0 auto;
+            /*background-image: linear-gradient( yellow 30%, cyan);*/
+        /*background-image: linear-gradient( hsl(60, 80%, 70%) 97%, hsl(0, 70%, 50%) 97%);
+            background-size: 100px;*/
+        /*
+                con 30% le estoy diciendo que sea yellow puro hasta el 30% y apartir de alli que comienze a combinar
+            */
+        /*background-image: -webkit-linear-gradient(top right, coral, darkorange);
+            /*
+                0deg en un degradado se voltea completamente como si fuera 360%
+            
+            background-image: linear-gradient(35deg, red, yellow);
+            position: relative;
+        }
+        
+        /*
+        body::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVUyVy_vbb9gQQq6H1nsehDO-JFMVJNWH6KW5BouT7xLUe6_dP");
+            background-position: top center;
+            background-size: contain;
+            opacity: .6;
+            position: absolute;
+        }
+        */
+        /*
+            radial-gradient es de dentro hacia fuera, toma forma depende del tamaño
+            de la caja como una elipse, si le especificamos circle si seria un circulo total
+            tambien podemos especificar un centro colocando el radio, ejm:
+            circle at 0 0
+        */
+        
+        .radial {
+            width: 900px;
+            height: 600px;
+            border: 2px solid peru;
+            margin: 0 auto;
+            background-image: -webkit-radial-gradient(circle, hsl(0, 100%, 60%), hsl(60, 80%, 50%));
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+
+    - hexadecimal: combinaciones de colores del 1 al 15
+                 apartir del 10 es A hasta F que es 15, desde #000000 que es negro hasta #ffffff que es blanco
+                 tambien se puede representar en 3 colores como #5A2; o #000;
+
+    - rgb: combinaciones de 0 a 255 colores donde r=red, g=verde, b=azul
+    - rgba(): igual pero con transparencia o canal alpha donde 0 totalmente tranparente y 1 totalmente claro.   
+
+    - hsl: h = color, s = saturation, l = luminacion, donde:
+           hay colores hasta 360, 0 es rojo, 120 es verde, 240 es azul, 60 amarillo, 90 cyan, 180 magenta etc. 
+           * la saturacion se da hasta 100% donde 100% es el color mas fuerte, luminaciom tambien hasta 100%, donde 0% es totalmente negro,
+           y 100% es totalmente blanco.
+    - hsla() -> igual pero con canal alpha
+
+    - Degradados: combinacion de varios colores, se da como una transition
+-->
+
+
+    <div class="radial"></div>
+
+</body>
+
+</html>
