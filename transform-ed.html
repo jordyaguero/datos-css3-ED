@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>transform</title>
+
+    <style>
+         :root {
+            --size: 200px;
+        }
+        
+        .container {
+            margin: auto;
+            border: 1px solid black;
+            width: var(--size);
+            height: var(--size);
+        }
+        
+        .box {
+            font-size: 2em;
+            width: var(--size);
+            height: var(--size);
+            background-image: linear-gradient( transparent 99px, red 99px, red 100px, transparent 100px), linear-gradient(to left, transparent 99px, red 99px, red 100px, transparent 100px);
+            border: 1px solid red;
+            transform: translateX(100%) rotate(45deg);
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>
