@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejercicio corazon</title>
+
+    <style>
+        @keyframes latir {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(.5);
+            }
+        }
+        
+        .corazon {
+            width: 400px;
+            height: 280px;
+            margin: auto;
+            position: relative;
+            animation: latir 1s ease-in-out 0s infinite alternate;
+            animation-play-state: paused;
+        }
+        
+        .corazon::before,
+        .corazon::after {
+            content: "";
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 50%;
+            background: red;
+            border-radius: 50% 50% 0 0;
+        }
+        
+        .corazon::after {
+            left: 50%;
+            transform: rotate(-50deg);
+            transform-origin: bottom left;
+        }
+        
+        .corazon::before {
+            transform: rotate(50deg);
+            transform-origin: bottom right;
+        }
+        
+        .corazon:hover {
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="corazon"></div>
+
+</body>
+
+</html>
