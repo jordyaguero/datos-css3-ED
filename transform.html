@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin: 0 auto;
+            width: 300px;
+            height: 300px;
+            background: hsl(60, 100%, 50%);
+        }
+        
+        .container2 {
+            margin: 2em auto;
+            width: 200px;
+            height: 200px;
+            background: hsl(90, 100%, 30%);
+        }
+        
+        img {
+            max-width: 100%;
+        }
+        
+        .aguero:hover {
+            /*transform: rotate(45deg);*/
+            transform: rotate(0.1turn);
+            /*turn es una vuelta, 0.5 es media vuelta*/
+            transform: translateX(100px);
+            transform: translateY(100px);
+            transform: translate(-100px, 100px);
+            transform: scaleX(1.5);
+            transform: scaleY(1.5);
+            transform: scale(1.2, 1.2);
+            transform: skew(10deg);
+            /*skew=sazgado, tener en cuenta que 90deg no funciona*/
+            /*
+                punto de tranformacion se define con transform-origin: (x,y) los valores 
+                pueden ser left, right, top, bottom y en pixeles como 10px
+            */
+            /*transform-origin: top left;*/
+            transform-origin: 100px 100px;
+            /*
+                para agregar multiples transformaciones se separan por espacios, ejm:
+            */
+            transform: translate(100px, 100px) rotate(45deg);
+            /*
+                transition-delay; -> hace que despues del tiempo especificado haga el efecto dado
+            */
+            /*
+                shorthand para transition: duracion | propiedad | aceleracion | delay
+            */
+            /*
+                steps(3) -> dice en cuantos pasos hara la transition
+            */
+        }
+        
+        @keyframes mover {
+            from {
+                transform: translateX(-400px);
+            }
+            to {
+                transform: translateX(400px);
+            }
+        }
+        
+        @keyframes rotar {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes color {
+            0% {
+                background: hsl(240, 100%, 70%);
+            }
+            50% {
+                background: hsl(60, 80%, 30%);
+            }
+            100% {
+                background: hsl(0, 100%, 60%);
+            }
+        }
+        
+        @keyframes pulso {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(0.5);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .aguero {
+            display: block;
+            border: 1px solid skyblue;
+            border-radius: 50%;
+            /*transition: all 1s cubic-bezier(.75, -0.5, .14, 1.59);*/
+            /* transition-delay: 2s;*/
+            /*transition: 1s all steps(3) 1s;*/
+            /*animation-name: mover, rotar;
+            animation-duration: 3s, 3s;
+            animation-timing-function: ease-in-out, ease-in-out;
+            animation-delay: 1s, 4s;
+            /*animation-iteration-count: 3.5;
+            /* numero de veces que se va a repetir la animacion*/
+            /*
+                animation-direction: normal | reverse | alternate | alternate-reverse
+                va de la mano con animation-iteration-count
+            */
+            /*animation-direction: alternate;
+            /*
+                shorthand de animation:
+                animation: nombre | duracion | timing | delay | iteracion | direccion
+            */
+            /* animation: mover 3s ease-in-out 1s 3.5 alternate;*/
+            animation: rotar 3s ease-in-out 0s infinite alternate-reverse;
+        }
+        
+        .container {
+            animation: color 3s ease-in-out 0s infinite alternate;
+        }
+        
+        .container2 {
+            animation: pulso 1s ease-in-out 0s infinite alternate;
+            animation-play-state: paused;
+        }
+        /*
+            con animation-play-state: paused; // pausamos la animacion
+            y con animation-play-state: running; // reiniciamos la animacion
+        */
+        
+        .container2:hover {
+            animation-play-state: running;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <img class="aguero" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt="aguero" />
+    </div>
+
+    <div class="container2">
+    </div>
+</body>
+
+</html>
