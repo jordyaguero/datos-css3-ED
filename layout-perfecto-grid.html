@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout perfecto con grid</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        header {
+            background: hsl(140, 80%, 50%);
+            /*grid-column: 1 / span 3;*/
+            grid-area: header;
+        }
+        
+        footer {
+            background: hsl(30, 80%, 50%);
+            /*grid-column: 1 / span 3;
+            grid-row: 3;*/
+            grid-area: footer;
+        }
+        
+        aside {
+            background: hsl(170, 80%, 50%);
+        }
+        
+        aside:nth-of-type(1) {
+            /*grid-column: 1;
+            grid-row: 2 / span 1;*/
+            /*grid-row-start: 2;
+            grid-row-end: 3;*/
+            grid-area: aside;
+        }
+        
+        aside:last-child {
+            /*grid-column: 3;
+            grid-row: 2 / span 1;
+            */
+            grid-area: aside2;
+        }
+        
+        main {
+            background: hsl(60, 80%, 50%);
+            /*grid-column: 2 / span 1;*/
+            grid-area: main;
+        }
+        
+        body {
+            display: grid;
+            grid-template-rows: 100px 1fr 100px;
+            grid-template-columns: 20% 60% 20%;
+            grid-gap: 10px;
+            grid-template-areas: "header header header" "aside main aside2" "footer footer footer";
+            margin: 0;
+            min-height: 100vh;
+            text-align: center;
+            width: calc(100% - 20px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>Header</header>
+    <footer>Footer</footer>
+    <main>Main</main>
+    <aside class="aside1">Aside 1</aside>
+    <aside>Aside 2</aside>
+</body>
+
+</html>
