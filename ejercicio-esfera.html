@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejercicio esfera</title>
+
+    <style>
+        body {
+            background: #111;
+            display: flex;
+            min-height: 100vh;
+            margin: 0;
+        }
+        
+        .container {
+            perspective: 4000px;
+            position: relative;
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            animation: girar 1.5s infinite linear;
+            transform-style: preserve-3d;
+        }
+        
+        @keyframes girar {
+            to {
+                transform: rotateY(1turn);
+            }
+        }
+        
+        .circle {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+        
+        .circle:nth-child(2) {
+            transform: rotateY(40deg);
+        }
+        
+        .circle:nth-child(3) {
+            transform: rotateY(80deg);
+        }
+        
+        .circle:nth-child(4) {
+            transform: rotateY(120deg);
+        }
+        
+        .circle:nth-child(5) {
+            transform: rotateY(160deg);
+        }
+        
+        .circle:nth-child(6) {
+            transform: rotateY(200deg);
+        }
+        
+        .circle:nth-child(7) {
+            transform: rotateY(240deg);
+        }
+        
+        .circle:nth-child(8) {
+            transform: rotateY(280deg);
+        }
+        
+        .circle:nth-child(9) {
+            transform: rotateY(320deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+
+</html>
