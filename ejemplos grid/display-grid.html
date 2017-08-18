@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            margin: 0;
+        }
+        
+        .container {
+            margin: 0 auto;
+            width: 80%;
+            height: 100vh;
+        }
+        
+        img {
+            width: 100%;
+            height: 300px;
+        }
+        
+        .grid {
+            display: grid;
+            /*grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 300px auto 1fr;*/
+            /* nombrando lineas */
+            grid-template-columns: [inicio col-1] 1fr [col-2] 1fr [col-3] 1fr [final];
+            grid-template-rows: [inicio fila-1] 300px [fila-2] auto [fila-3] 1fr [final];
+        }
+        
+        header {
+            grid-column: col-1 / final;
+            grid-row: fila-1;
+        }
+        
+        section {
+            background: hsl(120, 90%, 65%);
+            grid-column: col-1 / final;
+            grid-row: fila-2;
+        }
+        
+        section>* {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        main {
+            /*background: hsl(270, 100%, 75%);*/
+            grid-column: col-1 / final;
+            grid-row: fila-3;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: auto;
+            grid-gap: .5em;
+        }
+        
+        main p {
+            background: hsl(270, 100%, 75%);
+            padding: .5em .5em;
+            border: 1px solid rgba(0, 0, 0, .2);
+            margin: 0;
+        }
+        
+        @media screen and (max-width: 800px) {
+            main {
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: .5em;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="grid">
+            <header>
+                <img src="https://www.codejobs.biz/public/images/blog/original/93f8bb0eb2c659b.jpg" alt="imagen">
+            </header>
+            <section>
+                <h1>titulo</h1>
+                <p>este es un parrafo de contenido</p>
+            </section>
+            <main>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p>
+                <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat enim explicabo qui ad deleniti molestias excepturi, vel officiis vitae. Magni, maiores. Aliquid aut saepe vel ipsa nam totam, deleniti illum?</p> -->
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>

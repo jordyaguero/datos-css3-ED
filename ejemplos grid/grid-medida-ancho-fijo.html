@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>grid</title>
+    <style>
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: [start col-a] 15em [col-b] 1fr [col-c] 10% [stop end last];
+            /* grid-template-rows: [start masthead] 3em [content] minmax(3em, 100%) [footer] 2em [stop end];*/
+            /*grid-template-rows: [start masthead] 3em [content] calc(100% - 5em) [footer] 2em [stop end];*/
+            /*
+            aqui decimos que la tercera columna nunca debe ser menor que 5em*/
+            grid-template-columns: [start masthead] 15em [content] 4.5fr [hola] minmax(5em, 3fr) [footer] 10% [stop end];
+        }
+        
+        .uno {
+            background: red;
+        }
+        
+        .dos {
+            background: blue;
+        }
+        
+        .tres {
+            background: green;
+        }
+        
+        .cuatro {
+            background: peru;
+        }
+        
+        .cinco {
+            background: yellow;
+        }
+        
+        .seis {
+            background: pink;
+        }
+        
+        .siete {
+            background: hsl(45, 100%, 50%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item uno">uno</div>
+        <div class="item dos">dos</div>
+        <div class="item tres">tres</div>
+        <div class="item cuatro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio, quisquam quia! Distinctio, qui? Accusamus ratione eligendi odio aliquid quis impedit architecto voluptates modi, nihil minima aut sint reiciendis tempore voluptatibus?</div>
+        <div class="item cinco">cinco</div>
+        <div class="item seis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus molestiae blanditiis id corrupti inventore optio recusandae eius, expedita similique iusto a. Ipsam iusto maiores optio quia iure! Dolor, praesentium et.</div>
+        <div class="siete">siete</div>
+    </div>
+</body>
+
+</html>

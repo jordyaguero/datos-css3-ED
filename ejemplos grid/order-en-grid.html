@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 100px 100px 100px;
+        }
+        
+        .c {
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+        
+        .e {
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+        
+        .b,
+        .j {
+            order: 2;
+        }
+        
+        .a,
+        .i {
+            order: 3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <div class="item f">F</div>
+        <div class="item g">G</div>
+        <div class="item h">H</div>
+        <div class="item i">I</div>
+        <div class="item j">J</div>
+    </div>
+
+    <!-- 
+        justify-items: alinea como flex-box pero en este caso alinea 
+        conforme alas lineas horizontales su valores son:
+        center
+        end
+        start
+        stretch
+        de la mismo manera justify-self para para un solo elemento
+
+        - align-items: alinea con respecto al eje de columnas
+        tiene los mismos 4 valores que justify-items y align-self igualmente 
+    
+        - justify-content: alinea para todo el bloque y acepta space-between y space-around ademas space-evenly,
+        - align-content: tambien para todo el bloque en el eje de columnas
+    -->
+</body>
+
+</html>

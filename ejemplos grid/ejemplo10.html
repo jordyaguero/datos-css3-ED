@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejemplo 10</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 70%;
+            margin: 1em auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            background: #eee;
+            display: grid;
+            /*grid-template-columns: repeat(3, 1fr);*/
+            grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-end];
+            grid-template-rows: [row-1] 15vh [row-2] 15vh [row-end];
+            border: 1px solid #aaa;
+            grid-gap: 1em;
+            padding: 2em 1em;
+        }
+        
+        .item {
+            background: #222;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 3em;
+            display: grid;
+            align-items: center;
+            padding-left: 1em;
+        }
+        
+        .a {
+            grid-row: row-1;
+            grid-column: col-1 / span 2;
+        }
+        
+        .b {
+            grid-row: row-1 / row-end;
+            grid-column: col-3;
+            display: flex;
+            align-items: flex-start;
+            padding-top: .5em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <!--<div class="item e">E</div>
+        <div class="item f">F</div>-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .container {
+            display: grid;
+            width: 50em;
+            grid-template-columns: 2em repeat(5, [col-A] 5em [col-B] 5em) 2em;
+            grid-template-rows: repeat(10, [R] 1.5em);
+            border: 1px solid black;
+        }
+        
+        .a {
+            background: yellow;
+            grid-row: R 3 / 7;
+            grid-column: col-B / span 2;
+        }
+        
+        .b {
+            background: blue;
+            grid-row: R / span R 2;
+            grid-column: col-A 3 / span 2 col-A;
+        }
+        
+        .c {
+            background: pink;
+            grid-row: 9;
+            grid-column: col-A -2;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item a">uno</div>
+        <div class="item b">dos</div>
+        <div class="item c">tres</div>
+
+    </div>
+</body>
+
+</html>

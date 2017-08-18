@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejemplo 10</title>
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+        
+        body {
+            width: 70%;
+            margin: 1em auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        .container {
+            background: #eee;
+            display: grid;
+            /*grid-template-columns: repeat(3, 1fr);*/
+            /*grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 1fr [col-end];*/
+            /*grid-template-columns: [col-1] 1fr [col-2] 1fr [col-3] 2fr [col-4];*/
+            grid-template-columns: repeat(2, [col] 1fr [col-end]) [fin] 2fr [fin-fin];
+            grid-template-rows: repeat(3, [row] 12vh [row-end]);
+            border: 1px solid #aaa;
+            grid-gap: 1em;
+            padding: 2em 1em;
+        }
+        
+        .item {
+            background: #222;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 3em;
+            display: grid;
+            align-items: center;
+            padding-left: 1em;
+        }
+        
+        .a {
+            grid-area: row / col / row-end / col-end 2;
+        }
+        
+        .b {
+            grid-area: row / fin / row-end / fin-fin;
+        }
+        
+        .c {
+            grid-area: row 2 / col / row 2 / col-end;
+        }
+        
+        .d {
+            grid-area: row 2 / col 2 / row 2 / fin-fin;
+        }
+        
+        .e {
+            grid-area: row 3 / col / row 3 / fin-fin;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="item a">A</div>
+        <div class="item b">B</div>
+        <div class="item c">C</div>
+        <div class="item d">D</div>
+        <div class="item e">E</div>
+        <!--<div class="item f">F</div>-->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ejemplo3</title>
+    <style>
+        .container {
+            min-height: 100vh;
+            display: grid;
+            grid-rows: auto 1fr auto;
+            grid-template-columns: 150px 150px 150px;
+            grid-template-areas: "header header header" "contenido contenido advert" "contenido contenido ." "footer footer footer";
+        }
+        
+        .item {
+            color: white;
+            padding: 1.5em 0;
+            font-size: 2em;
+        }
+        
+        .a {
+            background: #0d9;
+            grid-area: header;
+        }
+        
+        .b {
+            background: #d90;
+            grid-area: contenido;
+        }
+        
+        .c {
+            background: #9d0;
+            grid-area: advert;
+        }
+        
+        .d {
+            background: #90d;
+            grid-area: footer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item a">Header</div>
+        <div class="item b">content</div>
+        <div class="item c">aside</div>
+        <div class="item d">footer</div>
+    </div>
+</body>
+
+</html>

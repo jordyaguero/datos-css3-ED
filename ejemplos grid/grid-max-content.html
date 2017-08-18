@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: max-content max-content max-content max-content;
+            grid-template-rows: max-content max-content max-content;
+        }
+        
+        .item {
+            border: 1px solid #444;
+            padding: 1em;
+        }
+        
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        
+        .lorem {
+            width: 200px;
+        }
+        
+        .repeat {
+            height: 100vh;
+            display: grid;
+            /*  grid-template-columns: repeat(3, 2em 1fr 1fr) 2em;*/
+            /* grid-template-rows: 50vh;*/
+            /*no se puede anidar una repeticion dentro de otra repeticion*/
+            /* grid-template-columns: repeat(4, 10px [col-start] 250px [col-end]) 10px;*/
+            grid-template-rows: repeat(auto-fill, [top] 8em [bottom]);
+            /*grid-template-columns: repeat(auto-fill, 8em);*/
+            grid-template-columns: repeat(3, 20em) repeat(auto-fill, 2em);
+            /*tambien funciona al reves xq primero llena las pistas de repeticion fijas y luego las automaticas*/
+            grid-template-columns: repeat(auto-fill, 2em) repeat(3, 20em);
+            /*
+            auto-fill en repeat le dice que se mueve el tamaño especificado hasta donde ya no puedo mas
+            */
+            /*grid-template-columns: repeat(auto-fit, 20em);*/
+            /*
+                Si hay espacio para cinco pistas de columna en el contenedor de rejilla 
+                (es decir, tiene más de 100 ems de ancho), pero dos pistas no tienen ningún elemento de cuadrícula
+                 para entrar en ellas, las pistas de cuadrícula vacías se eliminarán, dejando las tres pistas
+                  de columna que qué contienen los elementos de cuadrícula.
+            */
+        }
+    </style>
+</head>
+
+<body>
+    <!--
+    <div class="container">
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt="">
+            <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae perferendis ducimus vero necessitatibus porro omnis iure eos, nihil cupiditate blanditiis officia dolorum esse veritatis placeat, doloremque facere voluptas modi? Facere!</p>
+        </div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBln0yehio4IWekcezEhkKdycUJsmA5SrBOKsDqGhp9QWAj-X_3A" alt=""> p
+            <p class="lorem">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae perferendis ducimus vero necessitatibus porro omnis iure eos, nihil cupiditate blanditiis officia dolorum esse veritatis placeat, doloremque facere voluptas modi? Facere!</p>
+        </div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSo6I2IZHCW6-dxNBIiMfdzG367M9aPHwYf_HCMoegnOyO7cYvG" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2cWZRuBhwk4inLcBfsUVIHMvkKUHQ_NsBLXM61V3isPWVPDds" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://agenbola.io/wp-content/uploads/2017/03/Aguero.jpg" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+        <div class="item"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgCQPCm8GulgQCJ0cqghq9FL3msFOML0bbGkePeSe1zf5VX99UKA" alt=""></div>
+    </div>
+
+-->
+    <!--
+        repeat tambien funciona para varios valores por ejemplo:
+        grid-template-columns: repeat(3, 2em 1fr 1fr);
+
+         digo que halla 9 columas las 3 primeras sera en este order: 2em 1fr 1fr y asi sucesivamente
+     -->
+
+    <div class="repeat">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+    </div>
+
+</body>
+
+</html>
