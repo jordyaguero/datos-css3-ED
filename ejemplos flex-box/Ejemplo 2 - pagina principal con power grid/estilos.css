@@ -1,0 +1,101 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #deded8;
+    border: 10px solid #444444;
+    font-family: Arial, sans-serif;
+    padding: 1em;
+}
+
+header {
+    background: #ddaa00;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    font-weight: bold;
+}
+header h1 {
+    margin: 0;
+}
+
+nav {
+    background: #deded8;
+    border-bottom: 1px solid #222;
+    display: flex;
+}
+ul {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+    display: flex;
+    flex: 1;
+}
+ul li {
+    background: #ffffff;
+    padding: .5em 1em;
+    margin: .5em;
+    border: 1px solid #444;
+    cursor: pointer;
+    flex: 0%;
+    text-align: center;
+}
+ul li a {
+    text-decoration: none;
+    color: #ddaa00;
+}
+
+section > img,
+section > button,
+section > a {
+    display: inline-block;
+    width: 100%;
+}
+
+section > img, section > button, section a {
+    width: 100%;
+    display: inline-flex;
+}
+
+section > button {
+    padding: .7em;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (min-width: 40rem){
+
+    body, main, section {
+        display: flex;
+    }
+    body, section {
+        flex-direction: column;
+    }
+    main {
+        background: #444444;
+    }
+    section {
+        background: white;
+    }
+    header, nav {
+        order: -1;
+    }
+    main > section {
+        flex: 1;
+        border: 5px solid #444;
+        margin: 0 .5em;
+        padding: .5em;
+    }
+    /*main > section:last-of-type {
+        flex: 3;
+    }*/
+    main > section > p {
+        flex: 1;
+    }
+}

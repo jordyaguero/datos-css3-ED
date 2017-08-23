@@ -1,0 +1,113 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0 auto;
+    width: 80%;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.height {
+    height: 180px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 200px 600px 200px;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: "header header header"
+                         "border border border"
+                         "footer footer footer";
+}
+
+.header {
+    background: #333333;
+    color: #d2d2d2;
+    grid-area: header;
+}
+.header__title {
+    text-align: center;
+    margin: 0;
+    padding: 1em;
+}
+
+.border {
+    grid-area: border;
+    display: grid;
+    grid-template-columns: 200px 600px 200px;
+    grid-template-rows: 1fr;
+    grid-template-areas: "nav main aside";
+    border-bottom: 5px solid #000000;
+}
+.navigation {
+    grid-area: nav;
+    background: #000000;
+    padding-bottom: .5em;
+}
+.menu {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.menu__item {
+    border-top: 1px solid #dddddd;
+    text-align: center;
+    padding-top: .5em;
+    cursor: pointer;
+    flex: 0 1 200px;
+    min-width: 150px;
+}
+.menu__item:last-child {
+    padding-bottom: .5em;
+    border-bottom: 1px solid #dddddd;
+}
+.menu__item--link {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+.main {
+    grid-area: main;
+    background: #deded8;
+    display: flex;
+}
+.main__article {
+    flex: 1 2 600px;
+}
+
+.main__article__title {
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+.main__article__content {
+    padding-left: 10px;
+}
+
+.aside {
+    grid-area: aside;
+    border-right: 1px solid #dddddd;
+    display: flex;
+    flex-direction: column;
+}
+.container-aside {
+    flex: 0 1 200px;
+    min-width: 150px;
+}
+.aside__title,
+.aside__content {
+    padding-left: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #deded8;
+    padding: .5em 0 .5em .65em;
+}

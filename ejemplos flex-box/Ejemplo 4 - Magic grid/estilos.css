@@ -1,0 +1,35 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    background: #d3d3d3;
+    flex: 1;
+    min-width: 200px;
+    max-width: 300px;
+    padding: 1em;
+    border: 1px solid #444444;
+}
+
+/* hack para alinear el ultimo elemento */
+.magic {
+    visibility: hidden;
+    /*padding: 1em;
+    border: 1px solid #444444;*/
+}

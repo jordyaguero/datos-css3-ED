@@ -1,0 +1,87 @@
+.calendar {
+    flex-direction: column;
+    width: 75%;
+    background: #dddddd;
+    counter-reset: calendar;
+}
+
+.calendar,
+.calendar > ul,
+.calendar > ol {
+    display: flex;
+    text-align: center;
+}
+ul,ol {
+    padding-left: 0;
+    list-style: none;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.calendar > ol {
+    flex-wrap: wrap;
+}
+
+.calendar ol::before,
+.calendar ol::after {
+    content: '';
+    box-sizing: border-box;
+    background: rgba(0,0,0,0.05);
+    outline: 1px solid transparent;
+}
+
+.monday ol::before,
+.wednesday.days31 ol::after,
+.thursday.days30 ol::after {
+    flex: 0 0 14.25%;
+}
+.tuesday ol::before,
+.tuesday.days31 ol::after ,
+.wednesday.days30 ol::after {
+    flex: 0 0 28.5%;
+}
+.wednesday ol::before,
+.monday.days31 ol::after,
+.tuesday.days30 ol::after {
+    flex: 0 0 42.75%;
+}
+.thursday ol::before,
+.sunday.days31 ol::after,
+.monday.days30 ol::after {
+    flex: 0 0 57%;
+}
+.friday ol::before,
+.saturday.days31 ol::after,
+.sunday.days30 ol::after {
+    flex: 0 0 71.25%;
+}
+.saturday ol::before,
+.friday.days31 ol::after,
+.saturday.days30 ol::after {
+    flex: 0 0 85.5%;
+}
+
+.calendar li {
+    flex: 0 0 14.25%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px;
+    outline: 1px solid #FFFFFF;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.calendar ul li {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.calendar ol li::before {
+    counter-increment: calendar;
+    content: counter(calendar);
+}
+
+.calendar ol li {
+    text-align: right;
+    height: 100px;
+}
