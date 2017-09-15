@@ -1,0 +1,65 @@
+
+.contact-widget {
+  display: flex;
+
+  &:first-of-type {
+    margin-right: 1rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: 2rem;
+    line-height: 2.2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    background: $secundaty-color;
+    color: white;
+  }
+  &__data {
+    margin-left: .5rem;
+  }
+  &__title {
+    margin: 0;
+    font-size: .9rem;
+  }
+  &__content {
+    margin: 0;
+    font-size: .75rem;
+  }
+}
+
+.button {
+  line-height: 3;
+  display: inline-block;
+  padding: 0 1rem;
+  text-decoration: none;
+  
+  &--dark {
+    background: $secundaty-color;
+    color: #fff;
+  }
+  &--light {
+    background: #fff;
+    color: $primary-color;
+  }
+  &--cta {
+    background: $primary-color;
+    color: #fff;
+  }
+  &--square {
+    padding: 0;
+    line-height: 2;
+  }
+}
+
+.social-network {
+  margin-left: 1rem;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    line-height: 3;
+    margin-right: .5rem;
+  }
+}

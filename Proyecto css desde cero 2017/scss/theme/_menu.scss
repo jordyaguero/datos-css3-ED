@@ -1,0 +1,54 @@
+
+.main-nav {
+  background: $primary-color;
+  display: none;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+  }
+  &.show {
+    display: block;
+  }
+
+  .main-menu {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+    }
+
+    &__item {
+      border-bottom: 1px solid rgba(#fff, .2);
+
+      @media screen and (min-width: 1024px) {
+        border-bottom: 0;
+      }
+    }
+
+    &__link {
+      display: block;
+      line-height: 3;
+      padding: 0 1rem;
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
+
+.toggle-menu {
+  display: table;
+  margin-right: auto;
+  margin-left: auto;
+  font-size: 1.5rem;
+  color: $primary-color;
+  cursor: pointer;
+
+  @media screen and (min-width: 1025px) {
+    display: none;
+  }
+}
+

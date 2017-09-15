@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Proyecto de fin de curso empleando todo lo aprendido">
+    <link href="https://file.myfontastic.com/4q23fejXacVzukqEKZSTbA/icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Proyecto fin de curso</title>
+</head>
+<body>
+
+<!-- header -->
+    <header class="main-header  main-container">
+
+        <div class="main-header1">
+            <img class="logo" src="https://ed.team/sites/default/files/edteam-logo-118.png?2abr2017" alt="logo">
+        </div>
+
+        <div class="main-header2">
+            <!-- widget -->
+            <div class="contact-widget">
+                <!-- icons -->
+                <div class="contact-widget__icon  icon-phone  button  button--dark  button--square"></div>
+                <!-- data -->
+                <div class="contact-widget__data">
+                    <h3 class="contact-widget__title">Call now</h3>
+                    <p class="contact-widget__content">960 706 650</p>
+                </div>
+            </div>
+
+            <div class="contact-widget">
+                <!-- icons -->
+                <div class="contact-widget__icon  icon-location  button  button--dark button--square"></div>
+                <!-- data -->
+                <div class="contact-widget__data">
+                    <h3 class="contact-widget__title">Our location</h3>
+                    <p class="contact-widget__content">Calle los manzanos 911 - Lima</p>
+                </div>
+            </div>
+
+            <div class="donate  icon-donate  button  button--dark">Donate new</div>
+        </div>
+
+    </header>
+<!-- menu -->
+
+    <div id="toggle-menu" class="icon-bars  toggle-menu"></div> <!-- icono hamburguesa -->
+    <nav id="nav" class="main-nav  main-container">
+        <ul class="main-menu">
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Home</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">About</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Event</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Gallery</a></li>
+            <li class="main-menu__item"><a class="main-menu__link" href="#">Contact</a></li>
+        </ul>
+
+        <!-- Redes sociales -->
+        <div class="social-network">
+            <a class="icon-facebook" href="https://facebook.com" target="_blank"></a>
+            <a class="icon-twitter" href="https://twitter.com" target="_blank"></a>
+            <a class="icon-linkedin" href="https://linkedin.com" target="_blank"></a>
+            <a class="icon-youtube" href="https://youtube.com" target="_blank"></a>
+        </div>
+    </nav>
+<!-- banner -->
+    <div class="main-banner  main-container">
+        <img class="main-banner__img" src="img/banner.jpeg" alt="banner">
+
+        <div class="main-banner__data">
+            <h2 class="main-banner__title">Go Green</h2>
+            <p class="main-banner__subtitle">Save the world by plating trees</p>
+            <p class="main-banner__description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam consequatur exercitationem
+                minima numquam odio, officiis quam qui soluta tempora ullam vitae voluptates. Amet architecto
+                corporis iusto placeat porro voluptatem, voluptates.
+            </p>
+            <!-- buttons -->
+            <a class="main-banner__button  button button--light" href="#">Join now</a>
+            <a class="main-banner__button  button button--cta" href="#">Donate now</a>
+        </div>
+    </div>
+<!-- features -->
+<!-- datos -->
+<!-- proyectos -->
+<!-- footer -->
+
+    <script>
+        let toggle = document.getElementById('toggle-menu'),
+            nav = document.getElementById('nav');
+
+        toggle.addEventListener('click', () => {
+            nav.classList.toggle('show');
+        })
+    </script>
+
+</body>
+</html>
